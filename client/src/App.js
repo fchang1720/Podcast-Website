@@ -15,6 +15,8 @@ import SinglePost from './pages/SinglePost';
 import Profile from './pages/Profile';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import Recorder from './pages/Recorder'
+
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
@@ -71,6 +73,10 @@ function App() {
               <Route 
                 path="/posts/:postId" 
                 element={<SinglePost />}
+              />
+              <Route 
+                path = "/voicepost"
+                element = {<Recorder />}
               />
             </Routes>
           </div>
