@@ -1,0 +1,28 @@
+[
+  {
+    "username": "Fong Chang",
+    "email": "fc@email.com",
+    "password": "pass1234"
+  },
+  {
+    "username": "Cumar Cumar",
+    "email": "cc@email.com",
+    "password": "pass1234"
+  },
+  {
+    "username": "Griffin Lundquist",
+    "email": "gl@email.com",
+    "password": "pass1234"
+  },
+  {
+    "username": "Hannah Lodge",
+    "email": "hl@email.com",
+    "password": "pass1234"
+  },
+  {
+    "username": "Kellen Andrea",
+    "email": "ka@email.com",
+    "password": "pass1234"
+  }
+
+]
