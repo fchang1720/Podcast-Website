@@ -1,3 +1,5 @@
+import React from 'react';
+
 import RecorderControls from "../components/Audio/recorderControls";
 import RecordingsList from "../components/Audio/recorderList";
 import useRecorder from "../hooks/userRecorder";
