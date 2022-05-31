@@ -15,7 +15,7 @@ import SinglePost from './pages/SinglePost';
 import Profile from './pages/Profile';
 import Header from './components/Header';
 import Footer from './components/Footer';
-// import Recorder from './pages/Recorder'
+import Recorder from './pages/Recorder'
 
 
 // Construct our main GraphQL API endpoint
@@ -74,10 +74,10 @@ function App() {
                 path="/posts/:postId" 
                 element={<SinglePost />}
               />
-              {/* <Route 
+              <Route 
                 path = "/voicepost"
                 element = {<Recorder />}
-              /> */}
+              />
             </Routes>
           </div>
           <Footer />
