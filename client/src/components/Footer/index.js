@@ -1,5 +1,6 @@
 import React from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
+import "./style.css"
 
 const Footer = () => {
   const location = useLocation();
@@ -9,7 +10,7 @@ const Footer = () => {
       <div className="container text-center mb-5">
         {location.pathname !== '/' && (
           <button
-            className="btn btn-dark mb-3"
+            className="goBack btn btn-dark mb-3"
             onClick={() => navigate(-1)}
           >
             &larr; Go Back
