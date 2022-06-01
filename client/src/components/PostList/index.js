@@ -72,13 +72,13 @@ const PostList = ({
                 >
                   {post.postAuthor} <br />
                   <span style={{ fontSize: '1rem' }}>
-                    had this post on {post.createdAt}
+                    created this post on {post.createdAt}
                   </span>
                 </Link>
               ) : (
                 <>
                   <span style={{ fontSize: '1rem' }}>
-                    You had this post on {post.createdAt}
+                    You created this post on {post.createdAt}
                   </span>
                 </>
               )}
