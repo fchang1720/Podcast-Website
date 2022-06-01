@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 import { LOGIN_USER } from '../utils/mutations';
+import './assets/Login.css'
 
 import Auth from '../utils/auth';
 
@@ -48,8 +49,8 @@ const Login = (props) => {
           <div className="card-body">
             {data ? (
               <p>
-                Success! You may now head{' '}
-                <Link to="/">back to the homepage.</Link>
+                Success! You may now head back to the{' '}
+                <Link to="/">homepage.</Link>
               </p>
             ) : (
               <form onSubmit={handleFormSubmit}>

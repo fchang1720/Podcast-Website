@@ -9,6 +9,8 @@ import CommentForm from '../components/CommentForm';
 
 import { QUERY_SINGLE_POST } from '../utils/queries';
 
+import './assets/SinglePost.css'
+
 const SinglePost = () => {
   // Use `useParams()` to retrieve value of the route parameter `:profileId`
   const { postId } = useParams();
@@ -25,12 +27,14 @@ const SinglePost = () => {
   }
   return (
     <div className="my-3">
+
       <h3 className="card-header bg-dark text-light p-2 m-0">
         {post.postAuthor} <br />
         <span style={{ fontSize: '1rem' }}>
-          had this post on {post.createdAt}
+          created this post on {post.createdAt}
         </span>
       </h3>
+
       <div className="bg-light py-4">
         <blockquote
           className="p-4"
@@ -48,9 +52,11 @@ const SinglePost = () => {
       <div className="my-5">
         <CommentList comments={post.comments} />
       </div>
+
       <div className="m-3 p-4" style={{ border: '1px dotted #1a1a1a' }}>
         <CommentForm postId={post._id} />
       </div>
+
     </div>
   );
 };
