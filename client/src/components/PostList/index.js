@@ -43,7 +43,7 @@ const PostList = ({
               className="btn btn-primary btn-block btn-squared"
               to={`/posts/${post._id}`}
             >
-              Comments
+              View Comments
             </Link>
           </div>
         ))}

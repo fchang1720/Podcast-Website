@@ -11,12 +11,13 @@ const Header = () => {
   return (
     <header className="bg-primary text-light mb-4 py-3 flex-row align-center">
       <div className="container flex-row justify-space-between-lg justify-center align-center">
+
         <div>
           <Link className="text-light" to="/">
-            <h1 className="m-0">Podcasts</h1>
+            <h1 className="m-0">Podcasts for Kids!</h1>
           </Link>
-          <p className="m-0">A place to share your own podcasts.</p>
         </div>
+
         <div>
           {Auth.loggedIn() ? (
             <>
@@ -38,6 +39,7 @@ const Header = () => {
             </>
           )}
         </div>
+
       </div>
     </header>
   );
