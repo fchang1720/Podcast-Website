@@ -1,0 +1,27 @@
+.home-container {
+    height: 100%;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.home-title {
+    color: var(--light)
+}
+
+.home-message {
+    color: var(--light);
+    width: 80%;
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+.postBox {
+    padding-left: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
