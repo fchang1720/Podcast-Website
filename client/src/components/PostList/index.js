@@ -96,7 +96,7 @@ const PostList = ({
               className="flex-row justify-center justify-space-between-md align-center"
               onSubmit={handleFormSubmit}
             >
-            <button className="btn btn-primary btn-block py-3" type="submit">
+            <button className="btn btn_primary btn-block py-3" type="submit">
               Delete Post
             </button>
             </form>

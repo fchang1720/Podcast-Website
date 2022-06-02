@@ -1,6 +1,15 @@
 import React from 'react';
+import { useMutation } from '@apollo/client';
+
+import { REMOVE_COMMENT } from '../../utils/mutations';
+
+import Auth from '../../utils/auth';
 
 const CommentList = ({ comments = [] }) => {
+
+  const [removeComment, { error }] = useMutation(REMOVE_COMMENT, {
+
+  })
   if (!comments.length) {
     return <h3>No Comments Yet</h3>;
   }
@@ -26,9 +35,6 @@ const CommentList = ({ comments = [] }) => {
                 </h5>
                 <p className="card-body">{comment.commentText}</p>
               </div>
-              <button className="btn btn-primary btn-block py-3" type="submit">
-                  Edit Comment
-                </button>
                 <button className="btn btn-primary btn-block py-3" type="submit">
                   Delete Comment
                 </button>
