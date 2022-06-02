@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
+import './CommentForm.css'
 
 import { ADD_COMMENT } from '../../utils/mutations';
 
@@ -41,12 +42,12 @@ const CommentForm = ({ postId }) => {
 
   return (
     <div>
-      <h4>Comments</h4>
+      <h4 className='comment-header'>Comment on this post:</h4>
 
       {Auth.loggedIn() ? (
         <>
           <p
-            className={`m-0 ${
+            className={`char-count m-0 ${
               characterCount === 280 || error ? 'text-danger' : ''
             }`}
           >
