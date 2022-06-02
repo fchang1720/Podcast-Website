@@ -1,4 +1,9 @@
-.card-header {
+form {
+    padding-left: 190px;
+    display: flex;
+}
+
+.post-form {
     height: 100%;
     width: 100%;
     display: flex;
@@ -6,4 +11,8 @@
     align-items: center;
     flex-direction: column;
     margin: 0 auto;
+}
+
+.write-box {
+    padding-left: 100px;
 }

@@ -44,7 +44,7 @@ const Login = (props) => {
 
   return (
     <main className="login-container flex-row justify-center mb-4">
-      <div className="col-12 col-lg-10">
+      <div className="col-12 col-lg-12">
         <div className="card">
           <h4 className="card-header bg-dark text-light p-2">Login</h4>
           <div className="card-body">
@@ -64,7 +64,7 @@ const Login = (props) => {
             </Form.Text>
           </Form.Group>
 
-        <Form.Group className="mb-3 form-input" controlId="formBasicPassword">
+        <Form.Group className="col-12 mb-3 form-input" controlId="formBasicPassword">
           <Form.Label>Password</Form.Label>
           <Form.Control type="password" placeholder="******" name='password' value={formState.password} onChange={handleChange}/>
         </Form.Group>
