@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 import { LOGIN_USER } from '../utils/mutations';
+import './assets/Login.css'
 
 import Auth from '../utils/auth';
 import Form from 'react-bootstrap/Form';
@@ -42,15 +43,15 @@ const Login = (props) => {
   };
 
   return (
-    <main className="flex-row justify-center mb-4">
-      <div className="col-12 col-lg-10">
+    <main className="login-container flex-row justify-center mb-4">
+      <div className="col-12 col-lg-12">
         <div className="card">
           <h4 className="card-header bg-dark text-light p-2">Login</h4>
           <div className="card-body">
             {data ? (
               <p>
-                Success! You may now head{' '}
-                <Link to="/">back to the homepage.</Link>
+                Success! You may now head back to the{' '}
+                <Link to="/">homepage.</Link>
               </p>
             ) : 
           // form inputs for the login page
@@ -63,7 +64,7 @@ const Login = (props) => {
             </Form.Text>
           </Form.Group>
 
-        <Form.Group className="mb-3 form-input" controlId="formBasicPassword">
+        <Form.Group className="col-12 mb-3 form-input" controlId="formBasicPassword">
           <Form.Label>Password</Form.Label>
           <Form.Control type="password" placeholder="******" name='password' value={formState.password} onChange={handleChange}/>
         </Form.Group>

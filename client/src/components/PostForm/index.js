@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
+import './PostForm.css'
 
 import { ADD_POST } from '../../utils/mutations';
 import { QUERY_POSTS, QUERY_ME } from '../../utils/queries';
@@ -63,7 +64,7 @@ const PostForm = () => {
   };
 
   return (
-    <div>
+    <div className='post-form'>
       <h3>Want to post something?</h3>
 
       {Auth.loggedIn() ? (
@@ -79,11 +80,11 @@ const PostForm = () => {
             className="flex-row justify-center justify-space-between-md align-center"
             onSubmit={handleFormSubmit}
           >
-            <div className="col-12 col-lg-9">
+            <div className="write-box col-12 col-lg-9">
               <textarea
                 name="postText"
                 
-                placeholder="Here's a new post..."
+                placeholder="Write a new post here..."
                 value={postText}
                 className="form-input w-100"
                 style={{ lineHeight: '1.5', resize: 'vertical' }}

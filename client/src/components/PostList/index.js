@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import './PostList.css'
 
 const PostList = ({
   posts,
@@ -25,13 +26,13 @@ const PostList = ({
                 >
                   {post.postAuthor} <br />
                   <span style={{ fontSize: '1rem' }}>
-                    had this post on {post.createdAt}
+                    created this post on {post.createdAt}
                   </span>
                 </Link>
               ) : (
                 <>
                   <span style={{ fontSize: '1rem' }}>
-                    You had this post on {post.createdAt}
+                    You created this post on {post.createdAt}
                   </span>
                 </>
               )}

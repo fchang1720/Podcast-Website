@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
+import './CommentForm.css'
 
 import { ADD_COMMENT } from '../../utils/mutations';
 
@@ -41,12 +42,12 @@ const CommentForm = ({ postId }) => {
 
   return (
     <div>
-      <h4>Comments</h4>
+      <h4 className='comment-header'>Comment on this post:</h4>
 
       {Auth.loggedIn() ? (
         <>
           <p
-            className={`m-0 ${
+            className={`char-count m-0 ${
               characterCount === 280 || error ? 'text-danger' : ''
             }`}
           >
@@ -54,7 +55,7 @@ const CommentForm = ({ postId }) => {
             {error && <span className="ml-2">{error.message}</span>}
           </p>
           <form
-            className="flex-row justify-center justify-space-between-md align-center"
+            className="comment-box flex-row justify-center justify-space-between-md align-center"
             onSubmit={handleFormSubmit}
           >
             <div className="col-12 col-lg-9">
