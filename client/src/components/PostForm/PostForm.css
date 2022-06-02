@@ -12,3 +12,7 @@ form {
     flex-direction: column;
     margin: 0 auto;
 }
+
+.write-box {
+    padding-left: 100px;
+}

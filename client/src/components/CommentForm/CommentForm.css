@@ -1,15 +1,19 @@
 form {
+    padding-left: 220px;
+    display: flex;
+}
+
+.comment-header {
     height: 100%;
     width: 100%;
     display: flex;
-    padding-right: 190px;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     margin: 0 auto;
 }
 
-.card-header {
+.char-count {
     height: 100%;
     width: 100%;
     display: flex;
