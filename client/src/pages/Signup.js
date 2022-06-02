@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 import { useMutation } from '@apollo/client';
 import { ADD_USER } from '../utils/mutations';
+import './assets/Signup.css'
 
 import Auth from '../utils/auth';
 
@@ -40,7 +41,7 @@ const Signup = () => {
 
   return (
     <main className="flex-row justify-center mb-4">
-      <div className="col-12 col-lg-10">
+      <div className="col-12 col-lg-12">
         <div className="card">
           <h4 className="card-header bg-dark text-light p-2">Sign Up</h4>
           <div className="card-body">
@@ -52,7 +53,7 @@ const Signup = () => {
             ) : (
               <form onSubmit={handleFormSubmit}>
                 <input
-                  className="form-input"
+                  className="col-8 col-lg-8 mt-2 p-2 form-input"
                   placeholder="Your username"
                   name="username"
                   type="text"
@@ -60,7 +61,7 @@ const Signup = () => {
                   onChange={handleChange}
                 />
                 <input
-                  className="form-input"
+                  className="col-8 col-lg-8 mt-2 p-2 form-input"
                   placeholder="Your email"
                   name="email"
                   type="email"
@@ -68,15 +69,15 @@ const Signup = () => {
                   onChange={handleChange}
                 />
                 <input
-                  className="form-input"
-                  placeholder="******"
+                  className="col-8 col-lg-8 mt-2 p-2 form-input"
+                  placeholder="Enter a password"
                   name="password"
                   type="password"
                   value={formState.password}
                   onChange={handleChange}
                 />
                 <button
-                  className="btn btn-block btn-primary"
+                  className="btn btn-block mt-3 btn-primary"
                   style={{ cursor: 'pointer' }}
                   type="submit"
                 >
