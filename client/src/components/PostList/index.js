@@ -1,3 +1,4 @@
+import Linkify from 'linkify-react';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client'
@@ -86,7 +87,7 @@ const PostList = ({
               )}
             </h4>
             <div className="card-body bg-light p-2">
-              <p>{post.postText}</p>
+              <Linkify>{post.postText}</Linkify>
             </div>
             <Link
               className="btn btn-primary btn-block btn-squared"

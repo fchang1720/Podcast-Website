@@ -24,18 +24,21 @@ const Home = () => {
         </p>
 
       </div>
+      <div>
+        <h2>Podcast of the Week</h2>
+          <iframe id="myFrame" width="420" height="345" src='https://www.youtube.com/embed/fb5ELWi-ekk'>fgh</iframe>
+      </div>
 
       <div className="postBox flex-row justify-center">
 
-        {/* <div className="col-12 col-md-10 mb-3 p-3" style={{ border: '1px dotted #1a1a1a' }}>
-          <a href='/me'>Create a post!</a>
-          {/* <PostForm /> */}
-        {/* </div> */}
+
+
 
         <div className="col-12 col-md-8 mb-3">
           {loading ? (
             <div>Loading...</div>
           ) : (
+            
             <PostList posts={posts} title="See what others are posting below!"/>
           )}
         </div>

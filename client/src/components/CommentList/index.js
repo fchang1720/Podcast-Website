@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
+import Linkify from 'linkify-react';
 
 import { REMOVE_COMMENT } from '../../utils/mutations';
 
@@ -56,7 +57,7 @@ const CommentList = ({ comments = [], postId }) => {
                     on {comment.createdAt}
                   </span>
                 </h5>
-                <p className="card-body">{comment.commentText}</p>
+                <Linkify className="card-body">{comment.commentText}</Linkify>
               </div>
                 <button className="btn btn-primary btn-block py-3" type="submit">
                   Delete Comment
