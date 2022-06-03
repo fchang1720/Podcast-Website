@@ -1,4 +1,5 @@
 import React from 'react';
+import Linkify from 'linkify-react';
 
 const CommentList = ({ comments = [] }) => {
   if (!comments.length) {
@@ -24,7 +25,7 @@ const CommentList = ({ comments = [] }) => {
                     on {comment.createdAt}
                   </span>
                 </h5>
-                <p className="card-body">{comment.commentText}</p>
+                <Linkify className="card-body">{comment.commentText}</Linkify>
               </div>
             </div>
           ))}
