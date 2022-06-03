@@ -1,9 +1,16 @@
-.header-container {
-    height: 100px
+header {
+    background: url(../assets/angled_colors.png);
+    background-size: 100%;
+    background-position: center;
 }
 
+.header-container {
+    height: 100px;
+}
+
+
 .topnav {
-    padding-right: 50px;
+    padding-right: 135px;
     padding-top: 20px;
     float: right;
     display:flex;
@@ -12,6 +19,7 @@
 }
 
 .title {
-    padding-left: 30px;
+    padding-left: 70px;
     padding-top: 27px;
 }
+
