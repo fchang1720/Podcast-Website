@@ -28,7 +28,7 @@ const SinglePost = () => {
   return (
     <div className="my-3">
 
-      <h3 className="card-header bg-dark text-light p-2 m-0">
+      <h3 className="card-header bg-dark text-dark p-2 m-0">
         {post.postAuthor} <br />
         <span style={{ fontSize: '1rem' }}>
           created this post on {post.createdAt}
