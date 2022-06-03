@@ -35,7 +35,7 @@ const CommentList = ({ comments = [] }) => {
         className="p-5 display-inline-block"
         style={{ borderBottom: '1px dotted #1a1a1a' }}
       >
-        Comments({comments.length})
+        Comments ({comments.length})
       </h3>
       <form
         className="delete-box flex-row justify-center justify-space-between-md align-center"

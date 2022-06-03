@@ -1,3 +1,8 @@
+:root {
+  --dark: #000000;
+  --light: #ffffff;
+}
+
 .App {
   text-align: center;
 }

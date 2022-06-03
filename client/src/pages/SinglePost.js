@@ -49,12 +49,12 @@ const SinglePost = () => {
         </blockquote>
       </div>
 
-      <div className="my-5">
-        <CommentList comments={post.comments} />
+      <div className="mb-3 p-4" style={{ border: '1px dotted #1a1a1a' }}>
+        <CommentForm postId={post._id} />
       </div>
 
-      <div className="m-3 p-4" style={{ border: '1px dotted #1a1a1a' }}>
-        <CommentForm postId={post._id} />
+      <div className="mb-5">
+        <CommentList comments={post.comments} />
       </div>
 
     </div>
