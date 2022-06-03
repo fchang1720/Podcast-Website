@@ -13,7 +13,7 @@ const Header = () => {
     <header className="bg-primary text-light mb-4 py-3 flex-row align-center">
       <div className="header-container flex-row justify-space-between-lg justify-center align-center">
 
-        <div class="topnav">
+        <div className="topnav">
             {Auth.loggedIn() ? (
               <>
                 <Link className="btn btn-lg btn-light m-2" to="/me">
