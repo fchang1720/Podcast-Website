@@ -56,11 +56,11 @@ const Login = (props) => {
             ) : 
           // form inputs for the login page
           <Form onSubmit={handleFormSubmit}>  
-          <Form.Group className="mb-3 form-input" controlId="formBasicEmail">
+          <Form.Group className="col-12 mb-3 form-input" controlId="formBasicEmail">
             <Form.Label>Email address</Form.Label>
             <Form.Control type="email" placeholder="Enter email" name='email' value={formState.email} onChange={handleChange}/>
             <Form.Text className="text-muted">
-              We'll never share your email with anyone else.
+              <small>We'll never share your email with anyone.</small>
             </Form.Text>
           </Form.Group>
 

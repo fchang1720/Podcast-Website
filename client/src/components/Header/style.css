@@ -19,7 +19,13 @@ header {
 }
 
 .title {
-    padding-left: 70px;
-    padding-top: 27px;
+    padding-left: 65px;
+    padding-top: 20px;
 }
 
+.logo {
+    height: 22%;
+    width: 22%;
+    padding-left: 65px;
+    object-fit: contain;
+}
