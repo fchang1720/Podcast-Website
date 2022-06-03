@@ -17,6 +17,11 @@ const typeDefs = gql`
     comments: [Comment]
   }
 
+  type Like {
+    _id: ID
+    
+  }
+
   type Comment {
     _id: ID
     commentText: String

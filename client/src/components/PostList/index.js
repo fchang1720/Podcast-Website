@@ -1,8 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './PostList.css'
+import  LikeCounter from './LikeCounter';
 
-const PostList = ({
+
+const PostList = ( {
   posts,
   title,
   showTitle = true,
@@ -10,7 +12,9 @@ const PostList = ({
 }) => {
   if (!posts.length) {
     return <h3>No Posts Yet</h3>;
+
   }
+
 
   return (
     <div>
@@ -40,12 +44,14 @@ const PostList = ({
             <div className="card-body bg-light p-2">
               <p>{post.postText}</p>
             </div>
+            <LikeCounter/>
             <Link
               className="btn btn-primary btn-block btn-squared"
               to={`/posts/${post._id}`}
             >
               View Comments
             </Link>
+            
           </div>
         ))}
     </div>
