@@ -27,7 +27,7 @@ const PostList = ({
           data: { posts: [removePost, ...posts] },
         });
       } catch (err) {
-        console.error(err);
+        console.log(JSON.stringify(err));
       }
 
       const { me } = cache.readQuery({ query: QUERY_ME });
@@ -41,16 +41,16 @@ const PostList = ({
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
+    console.log(posts[0]._id);
 
     try {
       const { data } = await removePost({
         variables: {
-          posts,
-          postAuthor: Auth.getProfile().data.username,
+          postId: posts[0]._id
         },
       });
     } catch (err) {
-      //console.error(err);
+      console.log(JSON.stringify(err,null,2));
     }
   };
 

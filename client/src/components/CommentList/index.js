@@ -3,13 +3,28 @@ import { useMutation } from '@apollo/client';
 
 import { REMOVE_COMMENT } from '../../utils/mutations';
 
-import Auth from '../../utils/auth';
+import Auth from '../../utils/auth'
 
 const CommentList = ({ comments = [] }) => {
 
-  const [removeComment, { error }] = useMutation(REMOVE_COMMENT, {
+  const [removeComment, { error }] = useMutation(REMOVE_COMMENT);
+  
+  const handleFormSubmit = async (event) => {
+    event.preventDefault();
 
-  })
+    try {
+      const { data } = await removeComment({
+        variables: {
+          comments,
+          commentAuthor: Auth.getProfile().data.username,
+        },
+      });
+
+    } catch (err) {
+      // console.error(err);
+    }
+    }
+  
   if (!comments.length) {
     return <h3>No Comments Yet</h3>;
   }
@@ -22,6 +37,10 @@ const CommentList = ({ comments = [] }) => {
       >
         Comments({comments.length})
       </h3>
+      <form
+        className="delete-box flex-row justify-center justify-space-between-md align-center"
+        onSubmit={handleFormSubmit}
+      >
       <div className="flex-row my-4">
         {comments &&
           comments.map((comment) => (
@@ -41,6 +60,7 @@ const CommentList = ({ comments = [] }) => {
             </div>
           ))}
       </div>
+      </form>
     </>
   );
 };
