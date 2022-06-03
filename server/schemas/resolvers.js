@@ -1,5 +1,5 @@
 const { AuthenticationError } = require('apollo-server-express');
-const { User, Post } = require('../models');
+const { User, Post, Likes } = require('../models');
 const { signToken } = require('../utils/auth');
 
 const resolvers = {
@@ -47,6 +47,17 @@ const resolvers = {
       const token = signToken(user);
 
       return { token, user };
+    },
+    addLike: async (parent, {postId, count}, context) => {
+      if (context.user){
+        return Post.findOneAndUpdate(
+          { _id: postId},
+          {$set: {
+            likes: count
+          } },
+        ) 
+      }
+      throw new AuthenticationError('You need to be logged in!'); 
     },
     addPost: async (parent, { postText }, context) => {
       if (context.user) {

@@ -9,8 +9,10 @@ import { QUERY_REMOVE_POSTS, QUERY_ME } from '../../utils/queries';
 import Auth from '../../utils/auth';
 import comments from '../CommentList';
 import './PostList.css'
+import  LikeCounter from './LikeCounter';
 
-const PostList = ({
+
+const PostList = ( {
   posts,
   title,
   showTitle = true,
@@ -59,7 +61,9 @@ const PostList = ({
 
   if (!posts.length) {
     return <h3>No Posts Yet</h3>;
+
   }
+
 
   return (
     <div>
@@ -89,6 +93,7 @@ const PostList = ({
             <div className="card-body bg-light p-2">
               <Linkify>{post.postText}</Linkify>
             </div>
+            <LikeCounter/>
             <Link
               className="btn btn-primary btn-block btn-squared"
               to={`/posts/${post._id}`}
