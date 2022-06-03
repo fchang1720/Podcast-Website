@@ -42,6 +42,15 @@ const Profile = () => {
           Viewing {userParam ? `${user.username}'s` : 'your'} profile.
         </h2>
 
+        {!userParam && (
+          <div
+            className="col-12 col-md-12 mb-4 p-4"
+            style={{ border: '1px dotted #1a1a1a' }}
+          >
+            <PostForm />
+          </div>
+        )}
+
         <div className="col-12 col-md-12 mb-5">
           <PostList
             posts={user.posts}
@@ -50,14 +59,7 @@ const Profile = () => {
             showUsername={false}
           />
         </div>
-        {!userParam && (
-          <div
-            className="col-12 col-md-12 p-4"
-            style={{ border: '1px dotted #1a1a1a' }}
-          >
-            <PostForm />
-          </div>
-        )}
+       
       </div>
     </div>
   );
