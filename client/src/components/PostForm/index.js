@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
-// import Linkify from 'linkify-react';
+import Linkify from 'linkify-react';
 import './PostForm.css'
 
 import { ADD_POST } from '../../utils/mutations';
