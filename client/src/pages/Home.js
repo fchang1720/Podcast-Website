@@ -16,9 +16,9 @@ const Home = () => {
 
       <div className='home-container'>
 
-        <h1 className='home-title'>Welcome!</h1>
-        <hr />
-        <p className='home-message'>This site is a place to share your own podcasts.
+        <h1 className='home-title mt-4 mb-4'>Welcome!</h1>
+   
+        <p className='home-message mb-4'>This site is a place to share your own podcasts.
         Feel free to create your own posts, as well as comment on others!
         Be as creative as you can be, and have fun!
         </p>
