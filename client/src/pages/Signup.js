@@ -44,7 +44,7 @@ const Signup = () => {
     <main className="flex-row justify-center mb-4">
       <div className="col-12 col-lg-12">
         <div className="card">
-          <h4 className="card-header bg-dark text-light p-2">Sign Up</h4>
+          <h4 className="card-header bg-dark text-dark p-2">Sign Up</h4>
           <div className="card-body">
             {data ? (
               <p>

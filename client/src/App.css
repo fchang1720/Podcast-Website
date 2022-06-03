@@ -41,3 +41,35 @@
     transform: rotate(360deg);
   }
 }
+
+@media screen and (max-width: 480px) {
+  main,
+  nav {
+    flex-direction: column;
+    font-size: small;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  main,
+  nav {
+    flex-direction: column;
+    font-size: large;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  main,
+  nav {
+    flex-direction: column;
+    font-size: larger;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  main,
+  nav {
+    flex-direction: column;
+    font-size: x-large;
+  }
+}
