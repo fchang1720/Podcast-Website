@@ -54,7 +54,7 @@ const SinglePost = () => {
       </div>
 
       <div className="mb-5">
-        <CommentList comments={post.comments} />
+        <CommentList comments={post.comments} postId = {postId} />
       </div>
 
     </div>

@@ -1,29 +1,33 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 
 import { REMOVE_COMMENT } from '../../utils/mutations';
 
+
 import Auth from '../../utils/auth'
 
-const CommentList = ({ comments = [] }) => {
+const CommentList = ({ comments = [], postId }) => {
 
   const [removeComment, { error }] = useMutation(REMOVE_COMMENT);
   
   const handleFormSubmit = async (event) => {
     event.preventDefault();
+    // console.log(post._id);
 
     try {
       const { data } = await removeComment({
         variables: {
-          comments,
-          commentAuthor: Auth.getProfile().data.username,
+          postId: postId,
+          commentId: comments[0]._id 
         },
       });
+      console.log(data);
 
     } catch (err) {
-      // console.error(err);
+      console.log(JSON.stringify(err,null,2));
     }
-    }
+  };
   
   if (!comments.length) {
     return <h3>No Comments Yet</h3>;

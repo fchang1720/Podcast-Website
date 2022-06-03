@@ -71,16 +71,11 @@ export const REMOVE_POST = gql`
 `
 
 export const REMOVE_COMMENT = gql`
-  mutation removeComment($postId: ID!) {
-    addComment(postId: $postId, commentText: $commentText) {
+  mutation removeComment($postId: ID!, $commentId: ID!) {
+    removeComment(postId: $postId, commentId: $commentId) {
       _id
-      postText
-      postAuthor
-      createdAt
-      comments {
+      comments{
         _id
-        commentText
-        createdAt
       }
     }
   }

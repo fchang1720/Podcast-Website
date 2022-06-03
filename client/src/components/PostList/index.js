@@ -6,6 +6,8 @@ import { REMOVE_POST } from '../../utils/mutations';
 import { QUERY_REMOVE_POSTS, QUERY_ME } from '../../utils/queries';
 
 import Auth from '../../utils/auth';
+import comments from '../CommentList';
+import './PostList.css'
 
 const PostList = ({
   posts,
