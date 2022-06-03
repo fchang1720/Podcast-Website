@@ -1,7 +1,35 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { useMutation } from '@apollo/client';
 import Linkify from 'linkify-react';
 
-const CommentList = ({ comments = [] }) => {
+import { REMOVE_COMMENT } from '../../utils/mutations';
+
+
+import Auth from '../../utils/auth'
+
+const CommentList = ({ comments = [], postId }) => {
+
+  const [removeComment, { error }] = useMutation(REMOVE_COMMENT);
+  
+  const handleFormSubmit = async (event) => {
+    event.preventDefault();
+    // console.log(post._id);
+
+    try {
+      const { data } = await removeComment({
+        variables: {
+          postId: postId,
+          commentId: comments[0]._id 
+        },
+      });
+      console.log(data);
+
+    } catch (err) {
+      console.log(JSON.stringify(err,null,2));
+    }
+  };
+  
   if (!comments.length) {
     return <h3>No Comments Yet</h3>;
   }
@@ -14,6 +42,10 @@ const CommentList = ({ comments = [] }) => {
       >
         Comments ({comments.length})
       </h3>
+      <form
+        className="delete-box flex-row justify-center justify-space-between-md align-center"
+        onSubmit={handleFormSubmit}
+      >
       <div className="flex-row my-4">
         {comments &&
           comments.map((comment) => (
@@ -27,9 +59,13 @@ const CommentList = ({ comments = [] }) => {
                 </h5>
                 <Linkify className="card-body">{comment.commentText}</Linkify>
               </div>
+                <button className="btn btn-primary btn-block py-3" type="submit">
+                  Delete Comment
+                </button>
             </div>
           ))}
       </div>
+      </form>
     </>
   );
 };

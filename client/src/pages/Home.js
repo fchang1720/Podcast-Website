@@ -24,6 +24,10 @@ const Home = () => {
         </p>
 
       </div>
+      <div>
+        <h2>Podcast of the Week</h2>
+          <iframe id="myFrame" width="420" height="345" src='https://www.youtube.com/embed/fb5ELWi-ekk'>fgh</iframe>
+      </div>
 
       <div className="pow-box flex-row justify-center mt-2 mb-2">
           <h2>Podcast of the Week:</h2>
@@ -33,7 +37,6 @@ const Home = () => {
       </div>
 
       <div className="postBox flex-row justify-center">
-
         <div className="col-12 col-md-8 mb-3">
           {loading ? (
             <div>Loading...</div>

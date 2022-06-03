@@ -1,5 +1,5 @@
 const { AuthenticationError } = require('apollo-server-express');
-const { User, Post } = require('../models');
+const { User, Post, Likes } = require('../models');
 const { signToken } = require('../utils/auth');
 
 const resolvers = {
@@ -48,6 +48,17 @@ const resolvers = {
 
       return { token, user };
     },
+    addLike: async (parent, {postId, count}, context) => {
+      if (context.user){
+        return Post.findOneAndUpdate(
+          { _id: postId},
+          {$set: {
+            likes: count
+          } },
+        ) 
+      }
+      throw new AuthenticationError('You need to be logged in!'); 
+    },
     addPost: async (parent, { postText }, context) => {
       if (context.user) {
         const post = await Post.create({
@@ -82,18 +93,20 @@ const resolvers = {
       throw new AuthenticationError('You need to be logged in!');
     },
     removePost: async (parent, { postId }, context) => {
+      // console.log("context resolver", context.user)
       if (context.user) {
         const post = await Post.findOneAndDelete({
-          _id: postId,
-          postAuthor: context.user.username,
+          _id: postId
+          // postAuthor: context.user.username,
         });
+        console.log("post resolver", post)
 
-        await User.findOneAndUpdate(
+        return await User.findOneAndUpdate(
           { _id: context.user._id },
           { $pull: { posts: post._id } }
         );
 
-        return post;
+        // return post;
       }
       throw new AuthenticationError('You need to be logged in!');
     },
@@ -105,7 +118,7 @@ const resolvers = {
             $pull: {
               comments: {
                 _id: commentId,
-                commentAuthor: context.user.username,
+                // commentAuthor: context.user.username,
               },
             },
           },

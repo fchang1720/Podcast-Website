@@ -58,3 +58,14 @@ export const QUERY_ME = gql`
     }
   }
 `;
+
+export const QUERY_REMOVE_POSTS = gql`
+  query removePosts {
+    posts {
+      _id
+      postText
+      postAuthor
+      createdAt
+    }
+  }
+`;

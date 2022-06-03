@@ -6,6 +6,7 @@ import { ADD_USER } from '../utils/mutations';
 import './assets/Signup.css'
 
 import Auth from '../utils/auth';
+import Form from 'react-bootstrap/Form';
 
 const Signup = () => {
   const [formState, setFormState] = useState({
@@ -85,6 +86,34 @@ const Signup = () => {
                 </button>
               </form>
             )}
+
+             {/* // form inputs for the signup page */}
+          {/* username input */}
+          <Form onSubmit={handleFormSubmit}>  
+          <Form.Group className="mb-3 form-input" controlId="">
+            <Form.Label>Username</Form.Label>
+            <Form.Control type="text" placeholder="Enter your username" name='username' value={formState.name} onChange={handleChange}/>
+          </Form.Group>
+          {/* email input */}
+          <Form.Group className="mb-3 form-input" controlId="formBasicEmail">
+            <Form.Label>Email address</Form.Label>
+            <Form.Control type="email" placeholder="Enter email" name='email' value={formState.email} onChange={handleChange}/>
+            <Form.Text className="text-muted">
+              We'll never share your email with anyone else.
+            </Form.Text>
+          </Form.Group>
+              {/* password input */}
+        <Form.Group className="mb-3 form-input" controlId="formBasicPassword">
+          <Form.Label>Password</Form.Label>
+          <Form.Control type="password" placeholder="******" name='password' value={formState.password} onChange={handleChange}/>
+        </Form.Group>
+        
+        <button variant="primary" type="submit" className="btn btn-block btn-primary">
+            Submit
+        </button>
+        </Form>
+            
+            
 
             {error && (
               <div className="my-3 p-3 bg-danger text-white">
