@@ -11,7 +11,7 @@ const CommentList = ({ comments = [] }) => {
         className="p-5 display-inline-block"
         style={{ borderBottom: '1px dotted #1a1a1a' }}
       >
-        Comments({comments.length})
+        Comments ({comments.length})
       </h3>
       <div className="flex-row my-4">
         {comments &&

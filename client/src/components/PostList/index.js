@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import comments from '../CommentList';
 import './PostList.css'
 import  LikeCounter from './LikeCounter';
 
@@ -22,10 +23,10 @@ const PostList = ( {
       {posts &&
         posts.map((post) => (
           <div key={post._id} className="card mb-3">
-            <h4 className="card-header bg-primary text-light p-2 m-0">
+            <h4 className="card-header bg-warning text-dark p-2 m-0">
               {showUsername ? (
                 <Link
-                  className="text-light"
+                  className="text-dark text-center"
                   to={`/profiles/${post.postAuthor}`}
                 >
                   {post.postAuthor} <br />
@@ -49,7 +50,7 @@ const PostList = ( {
               className="btn btn-primary btn-block btn-squared"
               to={`/posts/${post._id}`}
             >
-              View Comments
+              View Comments ({comments.length})
             </Link>
             
           </div>
