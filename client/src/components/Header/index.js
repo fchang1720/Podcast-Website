@@ -14,6 +14,8 @@ const Header = () => {
     <header className="bg-primary text-dark mb-4 py-3 flex-row align-center">
       <div className="header-container flex-row justify-space-between-lg justify-center align-center">
 
+
+
         <div className="topnav">
             {Auth.loggedIn() ? (
               <>

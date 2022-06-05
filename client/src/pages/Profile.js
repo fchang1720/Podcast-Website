@@ -28,7 +28,7 @@ const Profile = () => {
 
   if (!user?.username) {
     return (
-      <h4>
+      <h4 className='my-5 pt-4'>
         You need to be logged in to see this. Use the navigation links above to
         sign up or log in!
       </h4>
@@ -37,8 +37,8 @@ const Profile = () => {
 
   return (
     <div className='profile-posts'>
-      <div className="flex-row justify-center mb-3">
-        <h2 className="col-12 col-md-12 bg-dark text-light p-3 mb-4">
+      <div className="flex-row justify-center pt-2">
+        <h2 className="col-12 col-md-12 bg-dark text-light p-3 my-5">
           Viewing {userParam ? `${user.username}'s` : 'your'} profile!
         </h2>
 

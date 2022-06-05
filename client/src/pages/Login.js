@@ -64,7 +64,7 @@ const Login = (props) => {
             </Form.Text>
           </Form.Group>
 
-        <Form.Group className="col-12 mb-3 form-input" controlId="formBasicPassword">
+        <Form.Group className="col-12 mb-5 form-input" controlId="formBasicPassword">
           <Form.Label>Password</Form.Label>
           <Form.Control type="password" placeholder="******" name='password' value={formState.password} onChange={handleChange}/>
         </Form.Group>
