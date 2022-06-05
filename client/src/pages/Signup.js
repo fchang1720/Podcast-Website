@@ -41,10 +41,10 @@ const Signup = () => {
   };
 
   return (
-    <main className="flex-row justify-center mb-4">
+    <main className="flex-row justify-center mt-5 mb-3 py-4">
       <div className="col-12 col-lg-12">
         <div className="card">
-          <h4 className="card-header bg-dark text-dark p-2">Sign Up</h4>
+          <h4 className="card-header bg-dark text-dark mb-2 p-2">Sign Up</h4>
           <div className="card-body">
             {data ? (
               <p>
@@ -54,7 +54,7 @@ const Signup = () => {
             ) : (
               <form onSubmit={handleFormSubmit}>
                 <input
-                  className="col-8 col-lg-8 mt-2 p-2 form-input"
+                  className="col-10 col-lg-10 mt-2 p-2 form-input form-control-lg"
                   placeholder="Your username"
                   name="username"
                   type="text"
@@ -62,7 +62,7 @@ const Signup = () => {
                   onChange={handleChange}
                 />
                 <input
-                  className="col-8 col-lg-8 mt-2 p-2 form-input"
+                  className="col-10 col-lg-10 mt-2 p-2 form-input form-control-lg"
                   placeholder="Your email"
                   name="email"
                   type="email"
@@ -70,7 +70,7 @@ const Signup = () => {
                   onChange={handleChange}
                 />
                 <input
-                  className="col-8 col-lg-8 mt-2 p-2 form-input"
+                  className="col-10 col-lg-10 my-2 p-2 form-input form-control-lg"
                   placeholder="Enter a password"
                   name="password"
                   type="password"
@@ -89,29 +89,29 @@ const Signup = () => {
 
              {/* // form inputs for the signup page */}
           {/* username input */}
-          <Form onSubmit={handleFormSubmit}>  
+          {/* <Form onSubmit={handleFormSubmit}>  
           <Form.Group className="mb-3 form-input" controlId="">
             <Form.Label>Username</Form.Label>
             <Form.Control type="text" placeholder="Enter your username" name='username' value={formState.name} onChange={handleChange}/>
-          </Form.Group>
+          </Form.Group> */}
           {/* email input */}
-          <Form.Group className="mb-3 form-input" controlId="formBasicEmail">
+          {/* <Form.Group className="mb-3 form-input" controlId="formBasicEmail">
             <Form.Label>Email address</Form.Label>
             <Form.Control type="email" placeholder="Enter email" name='email' value={formState.email} onChange={handleChange}/>
             <Form.Text className="text-muted">
               We'll never share your email with anyone else.
             </Form.Text>
-          </Form.Group>
+          </Form.Group> */}
               {/* password input */}
-        <Form.Group className="mb-3 form-input" controlId="formBasicPassword">
+        {/* <Form.Group className="mb-3 form-input" controlId="formBasicPassword">
           <Form.Label>Password</Form.Label>
           <Form.Control type="password" placeholder="******" name='password' value={formState.password} onChange={handleChange}/>
-        </Form.Group>
+        </Form.Group> */}
         
-        <button variant="primary" type="submit" className="btn btn-block btn-primary">
+        {/* <button variant="primary" type="submit" className="btn btn-block btn-primary">
             Submit
-        </button>
-        </Form>
+        </button> */}
+        {/* </Form> */}
             
             
 

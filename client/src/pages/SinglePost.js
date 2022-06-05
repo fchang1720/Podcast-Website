@@ -26,9 +26,9 @@ const SinglePost = () => {
     return <div>Loading...</div>;
   }
   return (
-    <div className="my-3">
+    <div className="mt-2 p-1">
 
-      <h3 className="card-header bg-dark text-dark p-2 m-0">
+      <h3 className="card-header bg-dark text-dark p-2 mt-5">
         {post.postAuthor} <br />
         <span style={{ fontSize: '1rem' }}>
           created this post on {post.createdAt}

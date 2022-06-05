@@ -6,6 +6,7 @@ header {
 
 .header-container {
     height: 100px;
+    margin-bottom: 5px;
 }
 
 
@@ -24,8 +25,9 @@ header {
 }
 
 .logo {
-    height: 22%;
-    width: 22%;
-    padding-left: 65px;
+    height: 25%;
+    width: 25%;
+    padding-left: 10px;
+    position: absolute;
     object-fit: contain;
 }

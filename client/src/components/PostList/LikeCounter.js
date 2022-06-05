@@ -1,5 +1,6 @@
 // First we import `useState` with React so that we can take advantage of the hook
 import React, { useState, useEffect } from 'react';
+import './LikeCounter.css'
 
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import IconButton from '@mui/material/IconButton';
@@ -18,12 +19,13 @@ const LikeCounter = () => {
   };
 
   return (
-    <div>
+    <div className='like-counter mt-3 px-4'>
       {/* In our button element, we add a onClick event that invokes our handleClick method */}
-      <IconButton aria-label="like" onClick={handleClick} >
+            <p> Likes: {count}
+            <IconButton aria-label="like" onClick={handleClick} >
               <FavoriteBorderIcon /> 
             </IconButton>
-            <p> Likes: {count}</p>
+            </p>
     </div>
   );
 }

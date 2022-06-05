@@ -70,7 +70,7 @@ const PostList = ( {
       {showTitle && <h3>{title}</h3>}
       {posts &&
         posts.map((post) => (
-          <div key={post._id} className="card mb-3">
+          <div key={post._id} className="card mb-5">
             <h4 className="card-header bg-warning text-dark p-2 m-0">
               {showUsername ? (
                 <Link
@@ -90,7 +90,7 @@ const PostList = ( {
                 </>
               )}
             </h4>
-            <div className="card-body bg-light p-2">
+            <div className="card-body bg-light p-4">
               <Linkify>{post.postText}</Linkify>
             </div>
             <LikeCounter/>
@@ -104,7 +104,7 @@ const PostList = ( {
               className="flex-row justify-center justify-space-between-md align-center"
               onSubmit={handleFormSubmit}
             >
-            <button className="btn btn_primary btn-block py-3" type="submit">
+            <button className="btn btn-danger btn-block btn-squared p-2" type="submit">
               Delete Post
             </button>
             </form>
