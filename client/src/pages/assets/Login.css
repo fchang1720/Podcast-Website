@@ -2,11 +2,19 @@ form {
     height: 100%;
     width: 100%;
     display: flex;
-    padding-right: 190px;
+    padding-right: 8%;
+    padding-left: 8% !important;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     margin: 0 auto;
+}
+
+.login-container {
+    padding-top: 40px;
+    font-size: 50px;
+    padding-right: 10%;
+    padding-left: 3%;
 }
 
 .card-header {
@@ -19,3 +27,30 @@ form {
     margin: 0 auto;
 }
 
+.form-label {
+    margin-bottom: .5rem;
+    font-size: medium;
+}
+.small, small {
+    font-size: small !important ;
+}
+
+
+@media screen and (max-width: 480px) {
+    .topnav {
+      padding-right: 30px !important;
+    }
+
+  }
+  
+  @media screen and (max-width: 768px) {
+
+  }
+  
+  @media screen and (max-width: 1024px) {
+
+  }
+  
+  @media screen and (max-width: 1200px) {
+
+  }

@@ -1,5 +1,5 @@
 form {
-    padding-left: 190px;
+    padding-left: 10%;
     display: flex;
 }
 
@@ -11,8 +11,4 @@ form {
     align-items: center;
     flex-direction: column;
     margin: 0 auto;
-}
-
-.write-box {
-    padding-left: 100px;
 }

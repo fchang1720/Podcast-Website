@@ -12,6 +12,13 @@
   pointer-events: none;
 }
 
+button, input, optgroup, select, textarea {
+  margin: 3px;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -48,6 +55,14 @@
     flex-direction: column;
     font-size: small;
   }
+  .topnav {
+    padding-right: 20px;
+    padding-top: 20px;
+    float: right;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 }
 
 @media screen and (max-width: 768px) {
