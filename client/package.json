@@ -1,7 +1,7 @@
 {
   "name": "podcasts-for-kids",
   "version": "0.1.0",
-  "proxy": "http://localhost:3001",
+  "proxy": "http://localhost:3001/",
   "dependencies": {
     "@apollo/client": "^3.6.5",
     "@emotion/react": "^11.9.0",

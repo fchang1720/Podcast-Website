@@ -24,7 +24,7 @@ const Home = () => {
         </p>
 
       </div>
-
+      {/* Podcast of the week: */}
       <div className="pow-box flex-row justify-center mt-2 mb-2">
           <h2>Podcast of the Week:</h2>
       </div>
