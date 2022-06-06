@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
-import { startRecording, saveRecording } from "../handlers/recorder-controls";
+import { startRecording, keepRecording } from "../handlers/recorder-controls";
 
 const initialState = {
-  recordingMinutes: 0,
-  recordingSeconds: 0,
+  recordMinutes: 0,
+  recordSeconds: 0,
   initRecording: false,
   mediaStream: null,
   mediaRecorder: null,
@@ -21,24 +21,24 @@ export default function useRecorder() {
       recordingInterval = setInterval(() => {
         setRecorderState((prevState) => {
           if (
-            prevState.recordingMinutes === MAX_RECORDER_TIME &&
-            prevState.recordingSeconds === 0
+            prevState.recordMinutes === MAX_RECORDER_TIME &&
+            prevState.recordSeconds === 0
           ) {
             clearInterval(recordingInterval);
             return prevState;
           }
 
-          if (prevState.recordingSeconds >= 0 && prevState.recordingSeconds < 59)
+          if (prevState.recordSeconds >= 0 && prevState.recordSeconds < 59)
             return {
               ...prevState,
-              recordingSeconds: prevState.recordingSeconds + 1,
+              recordSeconds: prevState.recordSeconds + 1,
             };
 
-          if (prevState.recordingSeconds === 59)
+          if (prevState.recordSeconds === 59)
             return {
               ...prevState,
-              recordingMinutes: prevState.recordingMinutes + 1,
-              recordingSeconds: 0,
+              recordMinutes: prevState.recordMinutes + 1,
+              recordSeconds: 0,
             };
         });
       }, 1000);
@@ -91,7 +91,7 @@ export default function useRecorder() {
   return {
     recorderState,
     startRecording: () => startRecording(setRecorderState),
-    cancelRecording: () => setRecorderState(initialState),
-    saveRecording: () => saveRecording(recorderState.mediaRecorder),
+    exitRecording: () => setRecorderState(initialState),
+    keepRecording: () => keepRecording(recorderState.mediaRecorder),
   };
 }
