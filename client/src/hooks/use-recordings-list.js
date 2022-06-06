@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { deleteAudio } from "../handlers/recordings-list";
+import { getridofAudio } from "../handlers/recordings-list";
 import generateKey from "../utils/generate-key.js";
 
 export default function useRecordingsList(audio) {
@@ -14,6 +14,6 @@ export default function useRecordingsList(audio) {
 
   return {
     recordings,
-    deleteAudio: (audioKey) => deleteAudio(audioKey, setRecordings),
+    getridofAudio: (audioKey) => getridofAudio(audioKey, setRecordings),
   };
 }

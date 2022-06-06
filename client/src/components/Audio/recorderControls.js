@@ -4,21 +4,21 @@ import { formatMinutes, formatSeconds } from "../../utils/format-time";
 // import "./styles.css";
 
 export default function RecorderControls({ recorderState, handlers }) {
-  const { recordingMinutes, recordingSeconds, initRecording } = recorderState;
-  const { startRecording, saveRecording, cancelRecording } = handlers;
+  const { recordMinutes, recordSeconds, initRecording } = recorderState;
+  const { startRecording, keepRecording, exitRecording } = handlers;
 
   return (
     <div className="controls-container">
       <div className="recorder-display">
         <div className="recording-time">
           {initRecording && <div className="recording-indicator"></div>}
-          <span>{formatMinutes(recordingMinutes)}</span>
+          <span>{formatMinutes(recordMinutes)}</span>
           <span>:</span>
-          <span>{formatSeconds(recordingSeconds)}</span>
+          <span>{formatSeconds(recordSeconds)}</span>
         </div>
         {initRecording && (
           <div className="cancel-button-container">
-            <button className="cancel-button" title="Cancel recording" onClick={cancelRecording}>
+            <button className="cancel-button" title="Cancel recording" onClick={exitRecording}>
               <FontAwesomeIcon icon={faTimes} />
             </button>
           </div>
@@ -29,8 +29,8 @@ export default function RecorderControls({ recorderState, handlers }) {
           <button
             className="start-button"
             title="Save recording"
-            disabled={recordingSeconds === 0}
-            onClick={saveRecording}
+            disabled={recordSeconds === 0}
+            onClick={keepRecording}
           >
             <FontAwesomeIcon icon={faSave} size="2x" />
           </button>

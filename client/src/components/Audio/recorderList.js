@@ -4,7 +4,7 @@ import useRecordingsList from "../../hooks/use-recordings-list";
 // import "./styles.css";
 
 export default function RecordingsList({ audio }) {
-  const { recordings, deleteAudio } = useRecordingsList(audio);
+  const { recordings, getridofAudio } = useRecordingsList(audio);
 
   return (
     <div className="recordings-container">
@@ -19,7 +19,7 @@ export default function RecordingsList({ audio }) {
                   <button
                     className="delete-button"
                     title="Delete this audio"
-                    onClick={() => deleteAudio(record.key)}
+                    onClick={() => getridofAudio(record.key)}
                   >
                     <FontAwesomeIcon icon={faTrashAlt} />
                   </button>
