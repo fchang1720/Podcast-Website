@@ -1,3 +1,3 @@
-export function deleteAudio(audioKey, setRecordings) {
+export function getridofAudio(audioKey, setRecordings) {
     setRecordings((prevState) => prevState.filter((record) => record.key !== audioKey));
   }
