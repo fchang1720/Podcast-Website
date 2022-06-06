@@ -40,7 +40,7 @@ const Header = () => {
 
         <div>
           <Link className="text-dark" to="/">
-            {/* <h1 className="title m-0">Podcasts for Kids!</h1> */}
+
             <img className="logo" src={logo} alt="pfk" />
           </Link>
         </div>
